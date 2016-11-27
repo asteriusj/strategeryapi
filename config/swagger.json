@@ -35,6 +35,43 @@
       }
     },
     
+     "/strategery/{id}": {
+      "get": {
+        "tags": [
+          "Strategery"
+        ],
+        "operationId": "getStrategeryById",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Strategery"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    
     "/contacts": {
       "get": {
         "tags": [
