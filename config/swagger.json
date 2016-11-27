@@ -6,6 +6,35 @@
     "description": "A Contact list API based on Swagger and built using Node.js"
   },
   "paths": {
+    
+    "/strategery": {
+      "get": {
+        "tags": [
+          "Strategery"
+        ],
+        "operationId": "getStrategery",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Strategery"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    
     "/contacts": {
       "get": {
         "tags": [
