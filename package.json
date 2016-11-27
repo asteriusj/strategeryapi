@@ -1,14 +1,14 @@
 {
-  "name": "contactlist",
+  "name": "strtategeryapi",
   "description": "",
   "version": "1.0.0",
   "author": "asteriusj <jstewart@asteriusmedia.com>",
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "git://github.com/asteriusj/contactlist.git"
+    "url": "git://github.com/asteriusj/strategeryapi.git"
   },
-  "bugs": "http://github.com/asteriusj/contactlist/issues",
+  "bugs": "http://github.com/asteriusj/strategeryapi/issues",
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
