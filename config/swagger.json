@@ -9,7 +9,7 @@
     "/strategery": {
       "get": {
         "tags": [
-          "strategery"
+          "Strategery"
         ],
         "operationId": "getStrategery",
         "consumes": [
@@ -36,9 +36,9 @@
     "/strategery/{id}": {
       "get": {
         "tags": [
-          "strategery"
+          "Strategery"
         ],
-        "operationId": "getStrategeryId",
+        "operationId": "getStrategeryById",
         "consumes": [
           
         ],
@@ -153,14 +153,36 @@
     "Strategery": {
       "type": "object",
       "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "typeOf": {
+          "type": "string"
+        },
+        "etag": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
         "id": {
           "format": "int32",
           "type": "integer"
+        },
+        "name": {
+          "type": "string",
+          "example": "strategery"
         },
         "title": {
           "type": "string"
         },
         "summary": {
+          "type": "string"
+        },
+        "published": {
+          "type": "boolean"
+        },
+        "shortname": {
           "type": "string"
         }
       }
