@@ -8,25 +8,25 @@
   "tags": [
     {
       "name": "Strategery",
-      "description": "",
+      "description": "Operations about Strategery",
       "externalDocs": {
         "description": "Find out more",
         "url": "http://swagger.io"
       }
     },
     {
-      "name": "Maps",
-      "description": "Operations about owner "
+      "name": "StrategeryMap",
+      "description": "Operations about StrategeryMap"
     },
     {
       "name": "Contacts",
-      "description": "Access to "
+      "description": "Access to contact info"
     },
     {
       "name": "owner",
       "description": "Operations about owner",
       "externalDocs": {
-        "description": "Find out more about our store",
+        "description": "Find out more about owner",
         "url": "http://swagger.io"
       }
     }
@@ -179,7 +179,7 @@
         "tags": [
           "Strategery"
         ],
-        "summary": "Updates a strategerywith form data",
+        "summary": "Updates a strategery with form data",
         "description": "",
         "operationId": "updateStrategeryWithForm",
         "consumes": [
@@ -265,7 +265,7 @@
     "/strategery/map": {
       "get": {
         "tags": [
-          "Map"
+          "StrategeryMap"
         ],
         "operationId": "getStrategeryMap",
         "consumes": [
@@ -281,7 +281,43 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Map"
+                "$ref": "#/definitions/StrategeryMap"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/strategery/map/{id}": {
+      "get": {
+        "tags": [
+          "StrategeryMap"
+        ],
+        "operationId": "getStrategeryMapById",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/StrategeryMap"
               }
             }
           }
@@ -400,7 +436,7 @@
         }
       }
     },
-    "strategy#map": {
+    "StrategeryMap": {
       "type": "object",
       "properties": {
         "kind": {
