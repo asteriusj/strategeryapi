@@ -35,14 +35,41 @@
     "http"
   ],
   "paths": {
+    "/strategerys": {
+      "get": {
+        "tags": [
+          "Strategery"
+        ],
+        "operationId": "GetStrategery",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Strategery"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/strategery": {
       "post": {
-        "Strategery": [
-          "pet"
+        "tags": [
+          "Strategery"
         ],
         "summary": "Add a new Strategery",
         "description": "",
-        "operationId": "addPet",
+        "operationId": "addStrategery",
         "consumes": [
           "application/json",
           "application/xml"
@@ -366,8 +393,7 @@
         "deprecated": false
       }
     },
-
-"/pet": {
+    "/pet": {
       "post": {
         "tags": [
           "pet"
@@ -757,7 +783,6 @@
         ]
       }
     }
-
   },
   "definitions": {
     "Strategery": {
