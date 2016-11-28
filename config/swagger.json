@@ -165,7 +165,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Strategeryid to delete",
+            "description": "Strategery id to delete",
             "required": true,
             "type": "integer",
             "format": "int64"
@@ -189,7 +189,7 @@
         "tags": [
           "StrategeryMap"
         ],
-        "operationId": "getStrategeryMap",
+        "operationId": "StrategeryMap_get",
         "consumes": [
           
         ],
@@ -216,7 +216,7 @@
         "tags": [
           "StrategeryMap"
         ],
-        "operationId": "getStrategeryMapById",
+        "operationId": "StrategeryMap_getById",
         "consumes": [
           
         ],
