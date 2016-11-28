@@ -3,13 +3,12 @@
     "kind": "pet",
     "id": 5555,
     "title": "Pet One",
-
+    "summary": ""
   },
   {
     "kind": "pet",
     "id": 6666,
     "title": "Pet Two",
-
     "summary": ""
   }
 ]
