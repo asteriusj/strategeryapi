@@ -15,6 +15,10 @@
       }
     },
     {
+      "name": "Maps",
+      "description": "Operations about owner "
+    },
+    {
       "name": "Contacts",
       "description": "Access to "
     },
@@ -323,21 +327,6 @@
     }
   },
   "definitions": {
-    "Contact": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "name": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string"
-        }
-      }
-    },
     "Strategery": {
       "type": "object",
       "properties": {
@@ -365,6 +354,54 @@
           "type": "string"
         },
         "summary": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "published": {
+          "type": "boolean"
+        },
+        "shortname": {
+          "type": "string"
+        }
+      }
+    },
+    "strategy#map": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "typeOf": {
+          "type": "string"
+        },
+        "etag": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "owner": {
           "type": "string"
         },
         "published": {
@@ -410,6 +447,21 @@
         "name": "User"
       }
     },
+    "Contact": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      }
+    },
     "Category": {
       "type": "object",
       "properties": {
@@ -425,7 +477,7 @@
         "name": "Category"
       }
     },
-    "Tag": {
+    "Keywords": {
       "type": "object",
       "properties": {
         "id": {
