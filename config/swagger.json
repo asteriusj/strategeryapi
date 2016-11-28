@@ -5,8 +5,6 @@
     "title": "Strategery API",
     "description": "A Strategery list API based on Swagger and built using Node.js"
   },
-  "host": "strategymaps.azurewebsites.net",
-  "basePath": "/v2",
   "tags": [
     {
       "name": "Strategery",
