@@ -3,7 +3,7 @@
  var repository = require('../lib/strategeryRepository');
 
  module.exports = {
-     get: function getStrategery(req, res) {
+     get: function strategery_get(req, res) {
          res.json(repository.all())
      }
  };
