@@ -2,11 +2,45 @@
   "swagger": "2.0",
   "info": {
     "version": "v1",
-    "title": "Contact List",
-    "description": "A Contact list API based on Swagger and built using Node.js"
+    "title": "Strategery API",
+    "description": "A Strategery list API based on Swagger and built using Node.js",
+    "termsOfService": "",
+    "contact": {
+      "email": "info@asteriusmedia.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
   },
+  "host": "strategymaps.azurewebsites.net",
+  "basePath": "/v2",
+  "tags": [
+    {
+      "name": "Strategery",
+      "description": "",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "http://swagger.io"
+      }
+    },
+    {
+      "name": "Contacts",
+      "description": "Access to "
+    },
+    {
+      "name": "owner",
+      "description": "Operations about owner",
+      "externalDocs": {
+        "description": "Find out more about our store",
+        "url": "http://swagger.io"
+      }
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
   "paths": {
-    
     "/strategery": {
       "get": {
         "tags": [
@@ -34,8 +68,7 @@
         "deprecated": false
       }
     },
-    
-     "/strategery/{id}": {
+    "/strategery/{id}": {
       "get": {
         "tags": [
           "Strategery"
@@ -71,7 +104,6 @@
         "deprecated": false
       }
     },
-    
     "/contacts": {
       "get": {
         "tags": [
