@@ -58,6 +58,38 @@
         "deprecated": false
       }
     },
+    "post": {
+      "tags": [
+        "Strategery"
+      ],
+      "summary": "Add a new Strategery",
+      "description": "",
+      "operationId": "addStrategery",
+      "consumes": [
+        "application/json",
+        "application/xml"
+      ],
+      "produces": [
+        "application/xml",
+        "application/json"
+      ],
+      "parameters": [
+        {
+          "in": "body",
+          "name": "body",
+          "description": "Strategery object that needs to be added",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/Strategery"
+          }
+        }
+      ],
+      "responses": {
+        "405": {
+          "description": "Invalid input"
+        }
+      }
+    },
     "/strategery/{id}": {
       "get": {
         "tags": [
