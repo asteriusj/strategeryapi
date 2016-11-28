@@ -182,9 +182,10 @@
         "security": [
           
         ]
-      }
+      },
+      
     },
-    "/strategery/map": {
+    "/strategery_map": {
       "get": {
         "tags": [
           "StrategeryMap"
@@ -211,7 +212,43 @@
         "deprecated": false
       }
     },
-    "/strategery/map/{id}": {
+    "/strategery/{id}/map": {
+      "get": {
+        "tags": [
+          "StrategeryMap"
+        ],
+        "operationId": "StrategeryMap_getById",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/StrategeryMap"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/strategery_map/{id}": {
       "get": {
         "tags": [
           "StrategeryMap"
