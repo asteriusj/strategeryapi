@@ -262,6 +262,33 @@
         ]
       }
     },
+    "/strategery/map": {
+      "get": {
+        "tags": [
+          "Map"
+        ],
+        "operationId": "getStrategeryMap",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Map"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/contacts": {
       "get": {
         "tags": [
