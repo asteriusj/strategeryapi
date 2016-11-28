@@ -35,12 +35,12 @@
     "http"
   ],
   "paths": {
-    "/strategerys": {
+    "/strategery": {
       "get": {
         "tags": [
           "Strategery"
         ],
-        "operationId": "GetStrategery",
+        "operationId": "strategery_get",
         "consumes": [
           
         ],
@@ -62,95 +62,12 @@
         "deprecated": false
       }
     },
-    "/strategery": {
-      "post": {
-        "tags": [
-          "Strategery"
-        ],
-        "summary": "Add a new Strategery",
-        "description": "",
-        "operationId": "addStrategery",
-        "consumes": [
-          "application/json",
-          "application/xml"
-        ],
-        "produces": [
-          "application/xml",
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Strategery object that needs to be added",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Strategery"
-            }
-          }
-        ],
-        "responses": {
-          "405": {
-            "description": "Invalid input"
-          }
-        },
-        "security": [
-          
-        ]
-      }
-    },
-    "/strategery/findByStatus": {
-      "get": {
-        "tags": [
-          "Strategery"
-        ],
-        "summary": "Finds Strategery by status",
-        "description": "Multiple status values can be provided with comma separated strings",
-        "operationId": "findStrategeryByStatus",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "status",
-            "in": "query",
-            "description": "Status values that need to be considered for filter",
-            "required": true,
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "active",
-                "inprocess",
-                "inactive"
-              ],
-              "default": "active"
-            },
-            "collectionFormat": "multi"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/StrategyMap"
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid status value"
-          }
-        }
-      }
-    },
     "/strategery/{id}": {
       "get": {
         "tags": [
           "Strategery"
         ],
-        "operationId": "getStrategeryById",
+        "operationId": "strategery_getById",
         "consumes": [
           
         ],
@@ -198,7 +115,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "ID of strategerythat needs to be updated",
+            "description": "ID of strategery that needs to be updated",
             "required": true,
             "type": "integer",
             "format": "int64"
