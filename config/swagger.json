@@ -19,6 +19,34 @@
       "description": "Operations about StrategeryMap"
     },
     {
+      "name": "Theme",
+      "description": "Operations about StrategeryTheme"
+    },
+    {
+      "name": "Perspective",
+      "description": "Operations about StrategeryPerspective"
+    },
+    {
+      "name": "Scorecard",
+      "description": "Operations about StrategeryScorecard"
+    },
+    {
+      "name": "Objective",
+      "description": "Operations about StrategeryObjective"
+    },
+    {
+      "name": "Measure",
+      "description": "Operations about StrategeryMeasure"
+    },
+    {
+      "name": "Initiative",
+      "description": "Operations about StrategeryInitiative"
+    },
+    {
+      "name": "Task",
+      "description": "Operations about StrategeryTask"
+    },
+    {
       "name": "Contacts",
       "description": "Access to contact info"
     },
@@ -32,7 +60,8 @@
     }
   ],
   "schemes": [
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/": {
