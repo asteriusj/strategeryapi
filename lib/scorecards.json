@@ -1,0 +1,11 @@
+[
+    {
+      "kind": "strategy#scorecard",
+      "typeOf": "Scorecard",
+      "uid": "0b6bfba8-65c2-4380-82b6-7b87be5cfd95",
+      "id": "1",
+      "parentId": "",
+      "title": "Sample Scorecard",
+      "shortname": ""
+    }
+]
