@@ -35,7 +35,7 @@
     "http"
   ],
   "paths": {
-    "/strategery": {
+    "/": {
       "get": {
         "tags": [
           "Strategery"
@@ -62,7 +62,7 @@
         "deprecated": false
       }
     },
-    "/strategery/{id}": {
+    "/{id}": {
       "get": {
         "tags": [
           "Strategery"
@@ -184,7 +184,7 @@
         ]
       }
     },
-    "/strategery/map": {
+    "/map": {
       "get": {
         "tags": [
           "StrategeryMap"
@@ -211,7 +211,7 @@
         "deprecated": false
       }
     },
-    "/strategery/map/{id}": {
+    "/map/{id}": {
       "get": {
         "tags": [
           "StrategeryMap"
