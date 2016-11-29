@@ -1,0 +1,23 @@
+[
+    {
+      "kind": "strategy#measure",
+      "typeOf": "Metric",
+      "uid": "bdf06ae0-9f3b-4454-a1ce-830a11012188",
+      "name": "Number of foot patrols per week",
+      "shortname": "foot patrols / week"
+    },
+    {
+      "kind": "strategy#measure",
+      "typeOf": "Metric",
+      "uid": "9977e295-7405-406e-bb58-5f95dba027c4",
+      "name": "Hours of skills training completed in fiscal period",
+      "shortname": "Hours of skills training"
+    },
+    {
+      "kind": "strategy#measure",
+      "typeOf": "Metric",
+      "uid": "75ec395e-1084-4600-965a-27e04b1e73a9",
+      "name": "Number of People trained in fiscal period",
+      "shortname": "# of People trained"
+    }
+]
