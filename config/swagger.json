@@ -956,7 +956,322 @@
           "format": "int32",
           "type": "integer"
         },
+        "title": {
+          "type": "string"
+        },
         "summary": {
+          "type": "string"
+        },
+        "themes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Theme"
+          }
+        },
+        "persepctives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Perspective"
+          }
+        },
+        "scorecards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Scorecard"
+          }
+        },
+        "measures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Measure"
+          }
+        },
+        "objectives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Objective"
+          }
+        },
+        "initiatives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Initiative"
+          }
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Task"
+          }
+        },
+        "keywords": {
+          "type": "array",
+          "xml": {
+            "name": "tag",
+            "wrapped": true
+          },
+          "items": {
+            "$ref": "#/definitions/Tag"
+          }
+        },
+        "category": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "published": {
+          "type": "boolean"
+        },
+        "userdefinedfields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UDF"
+          }
+        },
+        "attacheddocuments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Doc"
+          }
+        },
+        "shortname": {
+          "type": "string"
+        }
+      }
+    },
+    "Theme": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "typeOf": {
+          "type": "string"
+        },
+        "etag": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "published": {
+          "type": "boolean"
+        },
+        "shortname": {
+          "type": "string"
+        }
+      }
+    },
+    "Perspective": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "typeOf": {
+          "type": "string"
+        },
+        "etag": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "published": {
+          "type": "boolean"
+        },
+        "shortname": {
+          "type": "string"
+        }
+      }
+    },
+    "Scorecard": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "typeOf": {
+          "type": "string"
+        },
+        "etag": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "published": {
+          "type": "boolean"
+        },
+        "shortname": {
+          "type": "string"
+        }
+      }
+    },
+    "Objective": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "typeOf": {
+          "type": "string"
+        },
+        "etag": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "parentid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "startdate": {
+          "type": "string"
+        },
+        "enddate": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "published": {
+          "type": "boolean"
+        },
+        "shortname": {
+          "type": "string"
+        }
+      }
+    },
+    "Initiative": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "typeOf": {
+          "type": "string"
+        },
+        "etag": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "parentid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "startdate": {
+          "type": "string"
+        },
+        "enddate": {
+          "type": "string"
+        },
+        "status": {
           "type": "string"
         },
         "keywords": {
