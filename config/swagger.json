@@ -15,7 +15,7 @@
       }
     },
     {
-      "name": "StrategeryMap",
+      "name": "Map",
       "description": "Operations about StrategeryMap"
     },
     {
@@ -184,10 +184,10 @@
         ]
       }
     },
-    "/map": {
+    "/maps": {
       "get": {
         "tags": [
-          "StrategeryMap"
+          "Map"
         ],
         "operationId": "StrategeryMap_get",
         "consumes": [
@@ -203,7 +203,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/StrategeryMap"
+                "$ref": "#/definitions/Map"
               }
             }
           }
@@ -211,10 +211,10 @@
         "deprecated": false
       }
     },
-    "/map/{id}": {
+    "/maps/{id}": {
       "get": {
         "tags": [
-          "StrategeryMap"
+          "Map"
         ],
         "operationId": "StrategeryMap_getById",
         "consumes": [
@@ -239,7 +239,70 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/StrategeryMap"
+                "$ref": "#/definitions/Map"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/tasks": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "operationId": "getTask",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Task"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/tasks/{id}": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "operationId": "getTask_ById",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Task"
               }
             }
           }
@@ -748,7 +811,46 @@
         }
       }
     },
-    "StrategeryMap": {
+    "Map": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "typeOf": {
+          "type": "string"
+        },
+        "etag": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "published": {
+          "type": "boolean"
+        },
+        "shortname": {
+          "type": "string"
+        }
+      }
+    },
+    "Task": {
       "type": "object",
       "properties": {
         "kind": {
