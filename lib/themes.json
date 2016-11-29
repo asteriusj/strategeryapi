@@ -1,0 +1,24 @@
+[
+    {
+      "kind": "strategy#theme",
+      "typeOf": "Theme Filter",
+      "uid": "ac523395-839b-4dfa-97bf-6207fe103802",
+      "name": "Customer Intimate",
+      ,
+      "shortname": "Customer Intimate"
+    },
+    {
+      "kind": "strategy#theme",
+      "typeOf": "Theme Filter",
+      "uid": "a5d528f1-420c-40d0-8f9c-519041a1c1d5",
+      "name": "Operationally Excellent",
+      "shortname": "Operationally Excellent"
+    },
+    {
+      "kind": "strategy#theme",
+      "typeOf": "Theme Filter",
+      "uid": "27dd2f1c-8728-4938-805e-e1c14aa1ba83",
+      "name": "Top Innovator",
+      "shortname": "Top Innovator"
+    }
+]
