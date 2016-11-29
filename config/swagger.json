@@ -247,6 +247,114 @@
         "deprecated": false
       }
     },
+    "/themes": {
+      "get": {
+        "tags": [
+          "Theme"
+        ],
+        "operationId": "StrategeryTheme_get",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Theme"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/perspectives": {
+      "get": {
+        "tags": [
+          "Perspective"
+        ],
+        "operationId": "StrategeryPerspective_get",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Perspective"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/scorecards": {
+      "get": {
+        "tags": [
+          "Scorecard"
+        ],
+        "operationId": "StrategeryScorecard_get",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Scorecard"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/objectives": {
+      "get": {
+        "tags": [
+          "Objective"
+        ],
+        "operationId": "StrategeryObjective_get",
+        "consumes": [
+          
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Objective"
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
     "/measures": {
       "get": {
         "tags": [
@@ -1176,6 +1284,64 @@
       }
     },
     "Objective": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "typeOf": {
+          "type": "string"
+        },
+        "etag": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "parentid": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "startdate": {
+          "type": "string"
+        },
+        "enddate": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "published": {
+          "type": "boolean"
+        },
+        "shortname": {
+          "type": "string"
+        }
+      }
+    },
+    "Measure": {
       "type": "object",
       "properties": {
         "kind": {
