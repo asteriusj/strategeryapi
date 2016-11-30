@@ -1062,15 +1062,6 @@
         },
         "category": {
           "type": "string"
-        },
-        "owner": {
-          "type": "string"
-        },
-        "published": {
-          "type": "boolean"
-        },
-        "shortname": {
-          "type": "string"
         }
       }
     },
@@ -1202,20 +1193,38 @@
         "summary": {
           "type": "string"
         },
+        "name": {
+          "type": "string"
+        },
         "description": {
-          "type": "string"
-        },
-        "keywords": {
-          "type": "string"
-        },
-        "category": {
           "type": "string"
         },
         "owner": {
           "type": "string"
         },
-        "published": {
-          "type": "boolean"
+        "objectives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Objective"
+          }
+        },
+        "comments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "userdefinedfields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UDF"
+          }
+        },
+        "attacheddocuments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Doc"
+          }
         },
         "shortname": {
           "type": "string"
@@ -1247,20 +1256,41 @@
         "summary": {
           "type": "string"
         },
+        "name": {
+          "type": "string"
+        },
         "description": {
-          "type": "string"
-        },
-        "keywords": {
-          "type": "string"
-        },
-        "category": {
           "type": "string"
         },
         "owner": {
           "type": "string"
         },
-        "published": {
-          "type": "boolean"
+        "objectives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Objective"
+          }
+        },
+        "comments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "image": {
+          "$ref": "#/definitions/Image"
+        },
+        "userdefinedfields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UDF"
+          }
+        },
+        "attacheddocuments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Doc"
+          }
         },
         "shortname": {
           "type": "string"
@@ -1286,13 +1316,14 @@
           "format": "int32",
           "type": "integer"
         },
+        "parentid": {
+          "format": "int32",
+          "type": "integer"
+        },
         "title": {
           "type": "string"
         },
         "summary": {
-          "type": "string"
-        },
-        "description": {
           "type": "string"
         },
         "keywords": {
@@ -1304,8 +1335,26 @@
         "owner": {
           "type": "string"
         },
+        "objectives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Objective"
+          }
+        },
         "published": {
           "type": "boolean"
+        },
+        "userdefinedfields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UDF"
+          }
+        },
+        "attacheddocuments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Doc"
+          }
         },
         "shortname": {
           "type": "string"
@@ -1344,26 +1393,59 @@
         "description": {
           "type": "string"
         },
-        "startdate": {
-          "type": "string"
+        "measures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Measure"
+          }
         },
-        "enddate": {
-          "type": "string"
+        "objectives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Objective"
+          }
         },
-        "status": {
-          "type": "string"
-        },
-        "keywords": {
-          "type": "string"
-        },
-        "category": {
-          "type": "string"
+        "initiatives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Initiative"
+          }
         },
         "owner": {
+          "$ref": "#/definitions/Owner"
+        },
+        "from-to-gap": {
           "type": "string"
         },
-        "published": {
-          "type": "boolean"
+        "perspective": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Perspective"
+          }
+        },
+        "theme": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Theme"
+          }
+        },
+        "document": {
+          "$ref": "#/definitions/Doc"
+        },
+        "image": {
+          "$ref": "#/definitions/Image"
+        },
+        "userdefinedfields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UDF"
+          }
+        },
+        "attacheddocuments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Doc"
+          }
         },
         "shortname": {
           "type": "string"
@@ -1393,35 +1475,96 @@
           "format": "int32",
           "type": "integer"
         },
-        "title": {
-          "type": "string"
-        },
-        "summary": {
+        "name": {
           "type": "string"
         },
         "description": {
           "type": "string"
         },
-        "startdate": {
-          "type": "string"
+        "polarity": {
+          "type": "string",
+          "description": "",
+          "enum": [
+            "Higher Is Better (Up Arrow is Green)",
+            "Lower Is Better (Down Arrow is Green)",
+            "Stable Is Better (Right Arrow is Green)"
+          ]
         },
-        "enddate": {
-          "type": "string"
+        "timeperiodtype": {
+          "type": "string",
+          "description": "",
+          "enum": [
+            "Year",
+            "Quarter",
+            "Month",
+            "Week",
+            "Day"
+          ]
         },
-        "status": {
-          "type": "string"
+        "unitofmeasure": {
+          "type": "string",
+          "description": "",
+          "enum": [
+            "Value 0 Decimal",
+            "Value 0 Percent"
+          ]
         },
-        "keywords": {
-          "type": "string"
+        "targetvalue": {
+          "v": "50",
+          "r": "",
+          "y": "",
+          "g": ""
         },
-        "category": {
-          "type": "string"
+        "datavalues": [
+          {
+            "timeperiod": "Dec 2015",
+            "targetvalue": "50",
+            "actualvalue": "40",
+            "approved": true
+          },
+          {
+            "timeperiod": "Nav 2015",
+            "targetvalue": "50",
+            "actualvalue": "30",
+            "approved": true
+          },
+          
+        ],
+        "measures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Measure"
+          }
+        },
+        "initiatives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Initiative"
+          }
+        },
+        "maintainers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Contact"
+          }
         },
         "owner": {
-          "type": "string"
+          "$ref": "#/definitions/Owner"
         },
         "published": {
           "type": "boolean"
+        },
+        "userdefinedfields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UDF"
+          }
+        },
+        "attacheddocuments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Doc"
+          }
         },
         "shortname": {
           "type": "string"
@@ -1451,35 +1594,72 @@
           "format": "int32",
           "type": "integer"
         },
-        "title": {
-          "type": "string"
-        },
-        "summary": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "startdate": {
-          "type": "string"
-        },
-        "enddate": {
-          "type": "string"
-        },
-        "status": {
-          "type": "string"
-        },
         "keywords": {
           "type": "string"
         },
         "category": {
           "type": "string"
         },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusupdate": {
+          "type": "string"
+        },
+        "statuscolor": {
+          "type": "string"
+        },
+        "statuscolor": {
+          "type": "string"
+        },
+        "percentcomplete": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "activeflag": {
+          "type": "boolean"
+        },
+        "subinitiatives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Initiative"
+          }
+        },
+        "measures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Measure"
+          }
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/task"
+          }
+        },
         "owner": {
           "type": "string"
         },
         "published": {
           "type": "boolean"
+        },
+        "userdefinedfields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UDF"
+          }
+        },
+        "attacheddocuments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Doc"
+          }
         },
         "shortname": {
           "type": "string"
@@ -1501,12 +1681,9 @@
         "uid": {
           "type": "string"
         },
-        "id": {
+        "parentid": {
           "format": "int32",
           "type": "integer"
-        },
-        "summary": {
-          "type": "string"
         },
         "keywords": {
           "type": "string"
@@ -1514,11 +1691,55 @@
         "category": {
           "type": "string"
         },
-        "owner": {
+        "name": {
           "type": "string"
         },
-        "published": {
+        "description": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "statusupdate": {
+          "type": "string"
+        },
+        "statuscolor": {
+          "type": "string"
+        },
+        "statuscolor": {
+          "type": "string"
+        },
+        "percentcomplete": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "activeflag": {
           "type": "boolean"
+        },
+        "initiative": {
+          "$ref": "#/definitions/Initiative"
+        },
+        "assignedto": {
+          "$ref": "#/definitions/Contact"
+        },
+        "assignedby": {
+          "$ref": "#/definitions/Contact"
+        },
+        "pmtask": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "userdefinedfields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UDF"
+          }
+        },
+        "attacheddocuments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Doc"
+          }
         },
         "shortname": {
           "type": "string"
@@ -1553,7 +1774,7 @@
         "userStatus": {
           "type": "integer",
           "format": "int32",
-          "description": "User Status"
+          "description": "UserStatus"
         }
       },
       "xml": {
@@ -1615,7 +1836,7 @@
         },
         "status": {
           "type": "string",
-          "description": "pet status in the store",
+          "description": "petstatusinthestore",
           "enum": [
             "available",
             "pending",
@@ -1625,6 +1846,36 @@
       },
       "xml": {
         "name": "Pet"
+      }
+    },
+    "UDF": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "Doc": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
       }
     },
     "Category": {
