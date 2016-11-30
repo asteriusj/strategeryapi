@@ -1371,26 +1371,47 @@
         "description": {
           "type": "string"
         },
-        "startdate": {
-          "type": "string"
+        "measures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Measure"
+          }
         },
-        "enddate": {
-          "type": "string"
+        "objectives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Objective"
+          }
         },
-        "status": {
-          "type": "string"
-        },
-        "keywords": {
-          "type": "string"
-        },
-        "category": {
-          "type": "string"
+        "initiatives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Initiative"
+          }
         },
         "owner": {
+          "$ref": "#/definitions/Owner"
+        },
+        "from-to-gap": {
           "type": "string"
         },
-        "published": {
-          "type": "boolean"
+        "perspective": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Perspective"
+          }
+        },
+        "theme": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Theme"
+          }
+        },
+        "document": {
+          "$ref": "#/definitions/Doc"
+        },
+        "image": {
+          "$ref": "#/definitions/Image"
         },
         "userdefinedfields": {
           "type": "array",
