@@ -1193,20 +1193,26 @@
         "summary": {
           "type": "string"
         },
+        "name": {
+          "type": "string"
+        },
         "description": {
-          "type": "string"
-        },
-        "keywords": {
-          "type": "string"
-        },
-        "category": {
           "type": "string"
         },
         "owner": {
           "type": "string"
         },
-        "published": {
-          "type": "boolean"
+        "objectives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Objective"
+          }
+        },
+        "comments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "userdefinedfields": {
           "type": "array",
@@ -1250,20 +1256,29 @@
         "summary": {
           "type": "string"
         },
+        "name": {
+          "type": "string"
+        },
         "description": {
-          "type": "string"
-        },
-        "keywords": {
-          "type": "string"
-        },
-        "category": {
           "type": "string"
         },
         "owner": {
           "type": "string"
         },
-        "published": {
-          "type": "boolean"
+        "objectives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Objective"
+          }
+        },
+        "comments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "image": {
+          "$ref": "#/definitions/Image"
         },
         "userdefinedfields": {
           "type": "array",
@@ -1301,13 +1316,14 @@
           "format": "int32",
           "type": "integer"
         },
+        "parentid": {
+          "format": "int32",
+          "type": "integer"
+        },
         "title": {
           "type": "string"
         },
         "summary": {
-          "type": "string"
-        },
-        "description": {
           "type": "string"
         },
         "keywords": {
@@ -1318,6 +1334,12 @@
         },
         "owner": {
           "type": "string"
+        },
+        "objectives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Objective"
+          }
         },
         "published": {
           "type": "boolean"
@@ -1453,32 +1475,81 @@
           "format": "int32",
           "type": "integer"
         },
-        "title": {
-          "type": "string"
-        },
-        "summary": {
+        "name": {
           "type": "string"
         },
         "description": {
           "type": "string"
         },
-        "startdate": {
-          "type": "string"
+        "polarity": {
+          "type": "string",
+          "description": "",
+          "enum": [
+            "Higher Is Better (Up Arrow is Green)",
+            "Lower Is Better (Down Arrow is Green)",
+            "Stable Is Better (Right Arrow is Green)"
+          ]
         },
-        "enddate": {
-          "type": "string"
+        "timeperiodtype": {
+          "type": "string",
+          "description": "",
+          "enum": [
+            "Year",
+            "Quarter",
+            "Month",
+            "Week",
+            "Day"
+          ]
         },
-        "status": {
-          "type": "string"
+        "unitofmeasure": {
+          "type": "string",
+          "description": "",
+          "enum": [
+            "Value 0 Decimal",
+            "Value 0 Percent"
+          ]
         },
-        "keywords": {
-          "type": "string"
+        "targetvalue": {
+          "v": "50",
+          "r": "",
+          "y": "",
+          "g": ""
         },
-        "category": {
-          "type": "string"
+        "datavalues": [
+          {
+            "timeperiod": "Dec 2015",
+            "targetvalue": "50",
+            "actualvalue": "40",
+            "approved": true
+          },
+          {
+            "timeperiod": "Nav 2015",
+            "targetvalue": "50",
+            "actualvalue": "30",
+            "approved": true
+          },
+          
+        ],
+        "measures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Measure"
+          }
+        },
+        "initiatives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Initiative"
+          }
+        },
+        "maintainers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Contact"
+          }
         },
         "owner": {
-          "type": "string"
+          "$ref": "#/definitions/Owner"
         },
         "published": {
           "type": "boolean"
